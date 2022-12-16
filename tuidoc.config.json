@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": {
+      "text": "UI LIBRARY",
+      "linkUrl": "https://github.com/Na-hyunwoo/library-boilerplate"
+    },
+    "version": true
+  },
+  "footer": [
+    {
+      "title": "NHW",
+      "linkUrl": "https://github.com/Na-hyunwoo"
+    }
+  ],
+  "main": {
+    "filePath": "README.md"
+  },
+  "api": {
+    "filePath": "dist/esm",
+    "permalink": {
+      "repository": "https://github.com/Na-hyunwoo/library-boilerplate",
+      "ref": "master"
+    }
+  }
+}

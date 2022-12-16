@@ -1,0 +1,70 @@
+{
+  "name": "library-boilerplate",
+  "version": "1.0.0",
+  "description": "Tree Shakeable UI Library Boilerplate",
+  "main": "dist/esm-ui-library.js",
+  "module": "dist/esm/",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "dist",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "npm run build:esm && tuidoc",
+    "serve": "DEV_SERVER=true webpack-dev-server --mode development",
+    "build:dev": "webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "build:esm": "ttsc -p tsconfig.esm.json",
+    "build": "rm -rf dist && npm run build:dev && npm run build:prod && npm run build:esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Na-hyunwoo/library-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "Na-hyunwoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Na-hyunwoo/library-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Na-hyunwoo/library-boilerplate#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-tui": "^5.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "node-sass": "^8.0.0",
+    "postcss-loader": "^7.0.2",
+    "postcss-prefixer": "^2.1.3",
+    "prettier": "^2.8.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-scss": "^4.3.0",
+    "ts-loader": "^9.4.2",
+    "ttypescript": "^1.5.15",
+    "typescript": "^4.9.4",
+    "typescript-transform-paths": "^3.4.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "preact": "^10.11.3",
+    "preact-render-to-string": "^5.2.6",
+    "stylelint-webpack-plugin": "^3.3.0"
+  }
+}
